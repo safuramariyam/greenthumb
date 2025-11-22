@@ -1,0 +1,216 @@
+{
+  "app": {
+    "title": "ಸಸ್ಯ ಮತ್ತು ಮಣ್ಣಿನ ಆರೋಗ್ಯ ವಿಶ್ಲೇಷಕ",
+    "description": "AI-ಚಾಲಿತ ಒಳನೋಟಗಳೊಂದಿಗೆ ನಿಮ್ಮ ಕೃಷಿಯನ್ನು ಶಕ್ತಗೊಳಿಸಿ"
+  },
+  "nav": {
+    "dashboard": "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+    "soilAnalysis": "ಮಣ್ಣಿನ ವಿಶ್ಲೇಷಣೆ",
+    "plantHealth": "ಸಸ್ಯ ಆರೋಗ್ಯ",
+    "cropRecommendations": "ಬೆಳೆ ಶಿಫಾರಸುಗಳು",
+    "reports": "ವರದಿಗಳು",
+    "mapView": "ನಕ್ಷೆ ನೋಟ",
+    "forum": "ಸಮುದಾಯ ವೇದಿಕೆ",
+    "calendar": "ನಿರ್ವಹಣೆ ಕ್ಯಾಲೆಂಡರ್",
+    "sustainability": "ಸುಸ್ಥಿರತೆ ಸ್ಕೋರ್",
+    "logout": "ಲಾಗ್ ಔಟ್"
+  },
+  "auth": {
+    "login": "ಲಾಗಿನ್",
+    "signup": "ಸೈನ್ ಅಪ್",
+    "email": "ಇಮೇಲ್",
+    "password": "ಪಾಸ್‌ವರ್ಡ್",
+    "confirmPassword": "ಪಾಸ್‌ವರ್ಡ್ ದೃಢೀಕರಿಸಿ",
+    "selectRole": "ನಿಮ್ಮ ಪಾತ್ರವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "farmer": "ರೈತ",
+    "labExpert": "ಲ್ಯಾಬ್ ತಜ್ಞ",
+    "admin": "ನಿರ್ವಾಹಕ",
+    "alreadyHaveAccount": "ಈಗಾಗಲೇ ಖಾತೆ ಹೊಂದಿದ್ದೀರಾ?",
+    "dontHaveAccount": "ಖಾತೆ ಇಲ್ಲವೇ?",
+    "welcome": "ಮತ್ತೆ ಸ್ವಾಗತ!",
+    "getStarted": "ನಿಮ್ಮ ಖಾತೆಯೊಂದಿಗೆ ಪ್ರಾರಂಭಿಸಿ"
+  },
+  "dashboard": {
+    "welcome": "ಸ್ವಾಗತ",
+    "overview": "ಜಮೀನು ಅವಲೋಕನ",
+    "soilHealth": "ಮಣ್ಣಿನ ಆರೋಗ್ಯ",
+    "plantHealth": "ಸಸ್ಯ ಆರೋಗ್ಯ",
+    "recentActivity": "ಇತ್ತೀಚಿನ ಚಟುವಟಿಕೆ",
+    "quickActions": "ತ್ವರಿತ ಕ್ರಿಯೆಗಳು",
+    "cropYield": "ಬೆಳೆ ಇಳುವರಿ",
+    "activeFields": "ಸಕ್ರಿಯ ಜಮೀನುಗಳು",
+    "nutrientLevelsOverTime": "ಸಮಯದೊಂದಿಗೆ ಪೌಷ್ಠಿಕಾಂಶ ಮಟ್ಟಗಳು",
+    "soilHealthMetrics": "ಮಣ್ಣಿನ ಆರೋಗ್ಯ ಮೆಟ್ರಿಕ್ಸ್",
+    "monthlyNPKDistribution": "ಮಾಸಿಕ NPK ವಿತರಣೆ"
+  },
+  "soil": {
+    "analysis": "ಮಣ್ಣಿನ ವಿಶ್ಲೇಷಣೆ",
+    "uploadImage": "ಮಣ್ಣಿನ ಚಿತ್ರ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
+    "captureImage": "ಚಿತ್ರ ಸೆರೆಹಿಡಿಯಿರಿ",
+    "ph": "pH",
+    "phLevel": "pH ಮಟ್ಟ",
+    "nitrogen": "ಸಾರಜನಕ",
+    "nitrogenShort": "ಸಾರಜನಕ (N)",
+    "phosphorus": "ರಂಜಕ",
+    "phosphorusShort": "ರಂಜಕ (P)",
+    "potassium": "ಪೊಟ್ಯಾಸಿಯಮ್",
+    "potassiumShort": "ಪೊಟ್ಯಾಸಿಯಮ್ (K)",
+    "moisture": "ತೇವಾಂಶ",
+    "temperature": "ತಾಪಮಾನ",
+    "organicMatter": "ಸಾವಯವ ವಸ್ತು",
+    "parameters": "ಮಣ್ಣಿನ ಮಾನದಂಡಗಳು",
+    "analyze": "ಮಣ್ಣು ವಿಶ್ಲೇಷಿಸಿ",
+    "results": "ವಿಶ್ಲೇಷಣೆ ಫಲಿತಾಂಶಗಳು",
+    "recommendations": "ಶಿಫಾರಸುಗಳು"
+  },
+  "plant": {
+    "health": "ಸಸ್ಯ ಆರೋಗ್ಯ",
+    "uploadLeaf": "ಎಲೆ ಚಿತ್ರ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
+    "disease": "ರೋಗ ಪತ್ತೆಯಾಗಿದೆ",
+    "confidence": "ವಿಶ್ವಾಸ",
+    "treatment": "ಚಿಕಿತ್ಸೆ ಶಿಫಾರಸುಗಳು",
+    "healthy": "ಆರೋಗ್ಯಕರ",
+    "diseased": "ರೋಗಗ್ರಸ್ತ"
+  },
+  "crop": {
+    "recommendations": "ಬೆಳೆ ಶಿಫಾರಸುಗಳು",
+    "suitable": "ನಿಮ್ಮ ಮಣ್ಣಿಗೆ ಸೂಕ್ತವಾದ ಬೆಳೆಗಳು",
+    "reason": "ಈ ಬೆಳೆ ಏಕೆ?",
+    "season": "ಉತ್ತಮ ಋತು",
+    "suitability": "ಸೂಕ್ತತೆ",
+    "names": {
+      "rice": "ಅಕ್ಕಿ",
+      "wheat": "ಗೋಧಿ",
+      "tomato": "ಟೊಮಾಟೊ",
+      "cotton": "ಹತ್ತಿ"
+    },
+    "seasons": {
+      "monsoon": "ಮಾನ್ಸೂನ್",
+      "winter": "ಚಳಿಗಾಲ",
+      "summer": "ಬೇಸಿಗೆ"
+    },
+    "reasons": {
+      "rice": "ಸೂಕ್ತ pH ಮತ್ತು ಹೆಚ್ಚಿನ ತೇವಾಂಶ ಇದು ಅಕ್ಕಿ ಬೆಳೆಯಲು ಉತ್ತಮವಾಗಿದೆ",
+      "wheat": "ಉತ್ತಮ NPK ಸಮತೋಲನ ಮತ್ತು ಮಧ್ಯಮ ತೇವಾಂಶ ಗೋಧಿಗೆ ಪರಿಪೂರ್ಣವಾಗಿದೆ",
+      "tomato": "ಮಣ್ಣಿನ pH ಮತ್ತು ಪೌಷ್ಠಿಕಾಂಶದ ಮಟ್ಟಗಳು ಟೊಮಾಟೊದ ಅತ್ಯುತ್ತಮ ಬೆಳವಣಿಗೆಯನ್ನು ಬೆಂಬಲಿಸುತ್ತವೆ",
+      "cotton": "ಸಮರ್ಪಕ ಜಲನಿಕ್ಷೇಪ ಮತ್ತು ಪೌಷ್ಠಿಕಾಂಶದ ಸಾಮಗ್ರಿ ಹತ್ತಿಗೆ ಸೂಕ್ತವಾಗಿದೆ"
+    }
+  },
+  "reports": {
+    "title": "ವರದಿಗಳು ಮತ್ತು ವಿಶ್ಲೇಷಣೆಗಳು",
+    "download": "PDF ವರದಿ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+    "generate": "ವರದಿ ರಚಿಸಿ",
+    "generateNew": "ಹೊಸ ವರದಿ ರಚಿಸಿ",
+    "history": "ವರದಿ ಇತಿಹಾಸ",
+    "soilHealthAnalysis": "ಮಣ್ಣಿನ ಆರೋಗ್ಯ ವಿಶ್ಲೇಷಣೆ",
+    "plantDiseaseReport": "ಸಸ್ಯ ರೋಗ ವರದಿ",
+    "cropRecommendationSummary": "ಬೆಳೆ ಶಿಫಾರಸು ಸಾರಾಂಶ",
+    "monthlyFarmAnalytics": "ಮಾಸಿಕ ಜಮೀನು ವಿಶ್ಲೇಷಣೆ"
+  },
+  "map": {
+    "title": "ಕ್ಷೇತ್ರ ನಕ್ಷೆ ನೋಟ",
+    "healthy": "ಆರೋಗ್ಯಕರ",
+    "moderate": "ಮಧ್ಯಮ",
+    "critical": "ನಿರ್ಣಾಯಕ",
+    "location": "ಸ್ಥಳ"
+  },
+  "forum": {
+    "title": "ಸಮುದಾಯ ವೇದಿಕೆ",
+    "askQuestion": "ಪ್ರಶ್ನೆ ಕೇಳಿ",
+    "recentPosts": "ಇತ್ತೀಚಿನ ಪೋಸ್ಟ್‌ಗಳು",
+    "yourQuestions": "ನಿಮ್ಮ ಪ್ರಶ್ನೆಗಳು",
+    "expertAnswers": "ತಜ್ಞರ ಉತ್ತರಗಳು",
+    "post": "ಪ್ರಶ್ನೆ ಪೋಸ್ಟ್ ಮಾಡಿ",
+    "reply": "ಉತ್ತರಿಸಿ"
+  },
+  "calendar": {
+    "title": "ನಿರ್ವಹಣೆ ಕ್ಯಾಲೆಂಡರ್",
+    "watering": "ನೀರುಹಾಕುವಿಕೆ",
+    "fertilizing": "ಗೊಬ್ಬರ ಹಾಕುವಿಕೆ",
+    "pruning": "ಕತ್ತರಿಸುವಿಕೆ",
+    "harvesting": "ಸುಗ್ಗಿ",
+    "upcoming": "ಮುಂಬರುವ ಕಾರ್ಯಗಳು",
+    "timelineView": "ಸಮಯರೇಖೆ ನೋಟ",
+    "taskCategories": "ಕಾರ್ಯ ವರ್ಗಗಳು",
+    "taskCount": "{{count}} ಕಾರ್ಯ",
+    "taskCount_plural": "{{count}} ಕಾರ್ಯಗಳು",
+    "tasks": {
+      "waterRiceField": "ಅಕ್ಕಿ ಜಮೀನಿಗೆ ನೀರುಹಾಕಿ",
+      "applyOrganicFertilizer": "ಸಾವಯವ ಗೊಬ್ಬರ ಹಾಕಿ",
+      "pruneTomatoPlants": "ಟೊಮಾಟೊ ಸಸ್ಯಗಳನ್ನು ಕತ್ತರಿಸಿ",
+      "harvestWheatCrop": "ಗೋಧಿ ಬೆಳೆ ಕೊಯ್ಯಿರಿ"
+    }
+  },
+  "sustainability": {
+    "title": "ಸುಸ್ಥಿರತೆ ಸ್ಕೋರ್",
+    "yourScore": "ನಿಮ್ಮ ಸ್ಕೋರ್",
+    "ecoTips": "ಪರಿಸರ ಸ್ನೇಹಿ ಸಲಹೆಗಳು",
+    "waterConservation": "ನೀರಿನ ಸಂರಕ್ಷಣೆ",
+    "organicFarming": "ಸಾವಯವ ಕೃಷಿ",
+    "soilHealth": "ಮಣ್ಣಿನ ಆರೋಗ್ಯ ಅಭ್ಯಾಸಗಳು",
+    "trackPractices": "ನಿಮ್ಮ ಪರಿಸರ ಸ್ನೇಹಿ ಕೃಷಿ ಅಭ್ಯಾಸಗಳನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ",
+    "tips": {
+      "dripIrrigation": {
+        "title": "ಡ್ರಿಪ್ ನೀರಾವರಿ",
+        "description": "ಡ್ರಿಪ್ ನೀರಾವರಿ ವ್ಯವಸ್ಥೆಗಳನ್ನು ಬಳಸಿಕೊಂಡು 60% ವರೆಗೆ ನೀರನ್ನು ಉಳಿಸಿ"
+      },
+      "composting": {
+        "title": "ಕಂಪೋಸ್ಟಿಂಗ್",
+        "description": "ನಿಮ್ಮ ಮಣ್ಣಿಗೆ ಪೌಷ್ಠಿಕಾಂಶದಿಂದ ಸಮೃದ್ಧವಾದ ಕಂಪೋಸ್ಟ್ ರಚಿಸಲು ಅಡುಗೆಮನೆ ತ್ಯಾಜ್ಯವನ್ನು ಬಳಸಿ"
+      },
+      "cropRotation": {
+        "title": "ಬೆಳೆ ತಿರುಗಾಟ",
+        "description": "ಮಣ್ಣಿನ ಆರೋಗ್ಯವನ್ನು ಸುಧಾರಿಸಲು ಮತ್ತು ಕೀಟಗಳನ್ನು ಕಡಿಮೆ ಮಾಡಲು ವಾರ್ಷಿಕವಾಗಿ ಬೆಳೆಗಳನ್ನು ತಿರುಗಿಸಿ"
+      },
+      "mulching": {
+        "title": "ಮಲ್ಚಿಂಗ್",
+        "description": "ತೇವಾಂಶವನ್ನು ಉಳಿಸಲು ಮತ್ತು ಕಳೆಗಳನ್ನು ನಿಗ್ರಹಿಸಲು ಸಾವಯವ ಮಲ್ಚ್ ಅನ್ನು ಅನ್ವಯಿಸಿ"
+      }
+    }
+  },
+  "common": {
+    "submit": "ಸಲ್ಲಿಸು",
+    "cancel": "ರದ್ದುಮಾಡು",
+    "save": "ಉಳಿಸು",
+    "loading": "ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
+    "error": "ದೋಷ",
+    "success": "ಯಶಸ್ವಿ",
+    "getStarted": "ಪ್ರಾರಂಭಿಸಿ"
+  },
+  "home": {
+    "soilAnalysis": "ಮಣ್ಣಿನ ವಿಶ್ಲೇಷಣೆ",
+    "soilAnalysisDesc": "ಅತ್ಯಾಧುನಿಕ ಮಣ್ಣಿನ ಪರೀಕ್ಷೆ ಮತ್ತು ಪೌಷ್ಠಿಕಾಂಶ ವಿಶ್ಲೇಷಣೆ",
+    "plantHealth": "ಸಸ್ಯ ಆರೋಗ್ಯ",
+    "plantHealthDesc": "AI-ಚಾಲಿತ ರೋಗ ಪತ್ತೆಹಚ್ಚುವಿಕೆ ಮತ್ತು ಚಿಕಿತ್ಸೆ",
+    "cropRecommendations": "ಬೆಳೆ ಶಿಫಾರಸುಗಳು",
+    "cropRecommendationsDesc": "ಸೂಕ್ತ ಇಳುವರಿಗಾಗಿ ಡೇಟಾ-ಚಾಲಿತ ಬೆಳೆ ಆಯ್ಕೆ",
+    "analyticsDashboard": "ವಿಶ್ಲೇಷಣೆ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+    "analyticsDashboardDesc": "ನೈಜ-ಸಮಯ ಒಳನೋಟಗಳು ಮತ್ತು ಕಾರ್ಯಕ್ಷಮತೆ ಟ್ರ್ಯಾಕಿಂಗ್"
+  },
+  "months": {
+    "jan": "ಜನ",
+    "feb": "ಫೆಬ್ರ",
+    "mar": "ಮಾರ್ಚ್",
+    "apr": "ಏಪ್ರಿ",
+    "may": "ಮೇ",
+    "jun": "ಜೂನ್",
+    "jul": "ಜುಲೈ",
+    "aug": "ಆಗಸ್ಟ್",
+    "sep": "ಸೆಪ್ಟೆಂ",
+    "oct": "ಅಕ್ಟೋ",
+    "nov": "ನವೆಂ",
+    "dec": "ಡಿಸೆಂ",
+    "january": "ಜನವರಿ",
+    "february": "ಫೆಬ್ರವರಿ",
+    "march": "ಮಾರ್ಚ್",
+    "april": "ಏಪ್ರಿಲ್",
+    "mayFull": "ಮೇ",
+    "june": "ಜೂನ್",
+    "july": "ಜುಲೈ",
+    "august": "ಆಗಸ್ಟ್",
+    "september": "ಸೆಪ್ಟೆಂಬರ್",
+    "october": "ಅಕ್ಟೋಬರ್",
+    "november": "ನವೆಂಬರ್",
+    "december": "ಡಿಸೆಂಬರ್"
+  }
+}

@@ -1,0 +1,256 @@
+#################################################################
+# 🌱 Plant Disease API - Complete Testing Guide
+# VSCode REST Client Script
+#################################################################
+
+### Root Endpoint (Basic Check)
+GET http://localhost:8000/
+
+### Health Check
+GET http://localhost:8000/health
+
+### Dataset Statistics
+GET http://localhost:8000/dataset-stats
+
+### Model Info
+GET http://localhost:8000/model-info
+
+### 1️⃣ Start Training
+POST http://localhost:8000/train
+Content-Type: application/json
+
+{
+  "epochs": 50,
+  "batch_size": 8,
+  "learning_rate": 0.001,
+  "test_split": 0.2,
+  "model_type": "hybrid",
+  "device": "cuda"
+}
+
+#################################################################
+
+### 2️⃣ Analysis Endpoints
+# Analyze a Single Image (Using any image path)
+POST http://localhost:8000/analyze
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="your_image.jpg"
+Content-Type: image/jpeg
+
+< C:\Users\ADMIN\Downloads\tomato-early-blight-leaf.jpg
+
+### Batch Analysis (Multiple Images)
+POST http://localhost:8000/batch-analyze
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="files[]"; filename="image1.jpg"
+Content-Type: image/jpeg
+
+< C:\Users\ADMIN\Downloads\image1.jpg
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="files[]"; filename="image2.jpg"
+Content-Type: image/jpeg
+
+< C:\Users\ADMIN\Downloads\image2.jpg
+
+#################################################################
+
+### 3️⃣ Model Management
+# Save Model
+POST http://localhost:8000/save-model
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="plant_classifier.pt"
+Content-Type: application/octet-stream
+
+< C:\path\to\plant_classifier.pt
+
+### Load Model
+POST http://localhost:8000/load-model
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="plant_classifier.pt"
+Content-Type: application/octet-stream
+
+< C:\path\to\plant_classifier.pt
+
+#################################################################
+
+### 4️⃣ Dataset Endpoints
+# Upload Training Data
+POST http://localhost:8000/upload-training-data?crop_type=tomato&severity=0
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="healthy_tomato_1.jpg"
+Content-Type: image/jpeg
+
+< C:\Users\ADMIN\Downloads\healthy_tomato_1.jpg
+
+# Upload CSV Dataset Information
+POST http://localhost:8000/dataset-stats/csv
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="dataset_info.csv"
+Content-Type: text/csv
+
+< C:\path\to\dataset_info.csv
+
+#################################################################
+
+### 5️⃣ Training Management
+# Start Training
+POST http://localhost:8000/train
+Content-Type: application/json
+
+{
+  "epochs": 50,
+  "batch_size": 16,
+  "learning_rate": 0.001,
+  "test_split": 0.2,
+  "model_type": "hybrid",
+  "device": "cuda"
+}
+
+# Stop Training
+POST http://localhost:8000/stop-train
+
+# Check Training Status
+GET http://localhost:8000/train/status
+
+# Continue Training
+POST http://localhost:8000/train/continue
+Content-Type: application/json
+
+{
+  "epochs": 10,
+  "checkpoint": "checkpoint_path"
+}
+
+### Performance Analysis
+GET http://localhost:8000/analyze/performance
+
+#################################################################
+
+### 6️⃣ System Monitoring
+# System Health
+GET http://localhost:8000/system/health
+
+# Component Status
+GET http://localhost:8000/system/status
+
+# Memory Usage
+GET http://localhost:8000/system/memory
+
+# Resource Monitoring
+GET http://localhost:8000/system/resources
+
+#################################################################
+
+### 7️⃣ Storage Management
+# Data Usage
+GET http://localhost:8000/storage/data-usage
+
+# Model Space
+GET http://localhost:8000/storage/model-usage
+
+# System Free Space
+GET http://localhost:8000/storage/system-free
+
+# Clear Storage
+POST http://localhost:8000/storage/clear
+Content-Type: application/json
+
+{
+  "component": "dataset",
+  "backup": true
+}
+
+#################################################################
+
+### 8️⃣ Model Operations
+# Model Export
+POST http://localhost:8000/model/export
+Content-Type: application/json
+
+{
+  "format": "torchscript",
+  "optimized": true
+}
+
+# Model Import
+POST http://localhost:8000/model/import
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="model.pt"
+Content-Type: application/octet-stream
+
+< C:\path\to\model.pt
+
+#################################################################
+
+### 9️⃣ Security Operations
+# API Token
+POST http://localhost:8000/security/token
+Content-Type: application/json
+
+{
+  "grant_type": "password",
+  "username": "admin",
+  "password": "securepassword"
+}
+
+# SSL Certificate
+POST http://localhost:8000/security/ssl
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="cert"; filename="certificate.pem"
+Content-Type: application/x-pem-file
+
+< C:\path\to\certificate.pem
+
+#################################################################
+
+### 🔥 Bonus: System Commands
+# View Logs
+GET http://localhost:8000/logs/latest
+
+# Check Dependencies
+GET http://localhost:8000/system/dependencies
+
+# System Status
+GET http://localhost:8000/system/status
+
+# Clear Cache
+POST http://localhost:8000/system/cache/clear
+
+# Backup Data
+POST http://localhost:8000/backup
+
+# Restore Data
+POST http://localhost:8000/restore
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="backup.zip"
+Content-Type: application/zip
+
+< C:\path\to\backup.zip
+
+# Reset System
+POST http://localhost:8000/system/reset
+
+### 💡 Notes
+# - Replace your_token in headers with your actual API token
+# - Replace C:\path\to\your_image with your actual image path
+# - Adjust batch_size based on your system memory
+# - Use device: "cpu" if GPU is unavailable

@@ -1,0 +1,216 @@
+{
+  "app": {
+    "title": "Plant & Soil Health Analyzer",
+    "description": "Empower your farming with AI-driven insights"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "soilAnalysis": "Soil Analysis",
+    "plantHealth": "Plant Health",
+    "cropRecommendations": "Crop Recommendations",
+    "reports": "Reports",
+    "mapView": "Map View",
+    "forum": "Community Forum",
+    "calendar": "Maintenance Calendar",
+    "sustainability": "Sustainability Score",
+    "logout": "Logout"
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "selectRole": "Select Your Role",
+    "farmer": "Farmer",
+    "labExpert": "Lab Expert",
+    "admin": "Admin",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "welcome": "Welcome back!",
+    "getStarted": "Get started with your account"
+  },
+  "dashboard": {
+    "welcome": "Welcome",
+    "overview": "Farm Overview",
+    "soilHealth": "Soil Health",
+    "plantHealth": "Plant Health",
+    "recentActivity": "Recent Activity",
+    "quickActions": "Quick Actions",
+    "cropYield": "Crop Yield",
+    "activeFields": "Active Fields",
+    "nutrientLevelsOverTime": "Nutrient Levels Over Time",
+    "soilHealthMetrics": "Soil Health Metrics",
+    "monthlyNPKDistribution": "Monthly NPK Distribution"
+  },
+  "soil": {
+    "analysis": "Soil Analysis",
+    "uploadImage": "Upload Soil Image",
+    "captureImage": "Capture Image",
+    "ph": "pH",
+    "phLevel": "pH Level",
+    "nitrogen": "Nitrogen",
+    "nitrogenShort": "Nitrogen (N)",
+    "phosphorus": "Phosphorus",
+    "phosphorusShort": "Phosphorus (P)",
+    "potassium": "Potassium",
+    "potassiumShort": "Potassium (K)",
+    "moisture": "Moisture",
+    "temperature": "Temperature",
+    "organicMatter": "Organic Matter",
+    "parameters": "Soil Parameters",
+    "analyze": "Analyze Soil",
+    "results": "Analysis Results",
+    "recommendations": "Recommendations"
+  },
+  "plant": {
+    "health": "Plant Health",
+    "uploadLeaf": "Upload Leaf Image",
+    "disease": "Disease Detected",
+    "confidence": "Confidence",
+    "treatment": "Treatment Recommendations",
+    "healthy": "Healthy",
+    "diseased": "Diseased"
+  },
+  "crop": {
+    "recommendations": "Crop Recommendations",
+    "suitable": "Suitable Crops for Your Soil",
+    "reason": "Why this crop?",
+    "season": "Best Season",
+    "suitability": "Suitability",
+    "names": {
+      "rice": "Rice",
+      "wheat": "Wheat",
+      "tomato": "Tomato",
+      "cotton": "Cotton"
+    },
+    "seasons": {
+      "monsoon": "Monsoon",
+      "winter": "Winter",
+      "summer": "Summer"
+    },
+    "reasons": {
+      "rice": "Optimal pH and high moisture content make this ideal for rice cultivation",
+      "wheat": "Good NPK balance and moderate moisture are perfect for wheat",
+      "tomato": "Soil pH and nutrient levels support excellent tomato growth",
+      "cotton": "Adequate drainage and nutrient content suitable for cotton"
+    }
+  },
+  "reports": {
+    "title": "Reports & Analytics",
+    "download": "Download PDF Report",
+    "generate": "Generate Report",
+    "generateNew": "Generate New Report",
+    "history": "Report History",
+    "soilHealthAnalysis": "Soil Health Analysis",
+    "plantDiseaseReport": "Plant Disease Report",
+    "cropRecommendationSummary": "Crop Recommendation Summary",
+    "monthlyFarmAnalytics": "Monthly Farm Analytics"
+  },
+  "map": {
+    "title": "Field Map View",
+    "healthy": "Healthy",
+    "moderate": "Moderate",
+    "critical": "Critical",
+    "location": "Location"
+  },
+  "forum": {
+    "title": "Community Forum",
+    "askQuestion": "Ask a Question",
+    "recentPosts": "Recent Posts",
+    "yourQuestions": "Your Questions",
+    "expertAnswers": "Expert Answers",
+    "post": "Post Question",
+    "reply": "Reply"
+  },
+  "calendar": {
+    "title": "Maintenance Calendar",
+    "watering": "Watering",
+    "fertilizing": "Fertilizing",
+    "pruning": "Pruning",
+    "harvesting": "Harvesting",
+    "upcoming": "Upcoming Tasks",
+    "timelineView": "Timeline View",
+    "taskCategories": "Task Categories",
+    "taskCount": "{{count}} task",
+    "taskCount_plural": "{{count}} tasks",
+    "tasks": {
+      "waterRiceField": "Water rice field",
+      "applyOrganicFertilizer": "Apply organic fertilizer",
+      "pruneTomatoPlants": "Prune tomato plants",
+      "harvestWheatCrop": "Harvest wheat crop"
+    }
+  },
+  "sustainability": {
+    "title": "Sustainability Score",
+    "yourScore": "Your Score",
+    "ecoTips": "Eco-Friendly Tips",
+    "waterConservation": "Water Conservation",
+    "organicFarming": "Organic Farming",
+    "soilHealth": "Soil Health Practices",
+    "trackPractices": "Track your eco-friendly farming practices",
+    "tips": {
+      "dripIrrigation": {
+        "title": "Drip Irrigation",
+        "description": "Save up to 60% water by using drip irrigation systems"
+      },
+      "composting": {
+        "title": "Composting",
+        "description": "Use kitchen waste to create nutrient-rich compost for your soil"
+      },
+      "cropRotation": {
+        "title": "Crop Rotation",
+        "description": "Rotate crops annually to improve soil health and reduce pests"
+      },
+      "mulching": {
+        "title": "Mulching",
+        "description": "Apply organic mulch to retain moisture and suppress weeds"
+      }
+    }
+  },
+  "common": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "getStarted": "Get Started"
+  },
+  "home": {
+    "soilAnalysis": "Soil Analysis",
+    "soilAnalysisDesc": "Advanced soil testing and nutrient analysis",
+    "plantHealth": "Plant Health",
+    "plantHealthDesc": "AI-powered disease detection and treatment",
+    "cropRecommendations": "Crop Recommendations",
+    "cropRecommendationsDesc": "Data-driven crop selection for optimal yield",
+    "analyticsDashboard": "Analytics Dashboard",
+    "analyticsDashboardDesc": "Real-time insights and performance tracking"
+  },
+  "months": {
+    "jan": "Jan",
+    "feb": "Feb",
+    "mar": "Mar",
+    "apr": "Apr",
+    "may": "May",
+    "jun": "Jun",
+    "jul": "Jul",
+    "aug": "Aug",
+    "sep": "Sep",
+    "oct": "Oct",
+    "nov": "Nov",
+    "dec": "Dec",
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "mayFull": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December"
+  }
+}

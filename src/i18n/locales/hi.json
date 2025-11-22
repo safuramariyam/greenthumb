@@ -1,0 +1,216 @@
+{
+  "app": {
+    "title": "पौधे और मिट्टी स्वास्थ्य विश्लेषक",
+    "description": "AI-संचालित अंतर्दृष्टि के साथ अपनी खेती को सशक्त बनाएं"
+  },
+  "nav": {
+    "dashboard": "डैशबोर्ड",
+    "soilAnalysis": "मिट्टी विश्लेषण",
+    "plantHealth": "पौधे का स्वास्थ्य",
+    "cropRecommendations": "फसल सिफारिशें",
+    "reports": "रिपोर्ट",
+    "mapView": "मानचित्र दृश्य",
+    "forum": "सामुदायिक मंच",
+    "calendar": "रखरखाव कैलेंडर",
+    "sustainability": "स्थिरता स्कोर",
+    "logout": "लॉग आउट"
+  },
+  "auth": {
+    "login": "लॉगिन",
+    "signup": "साइन अप",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "confirmPassword": "पासवर्ड की पुष्टि करें",
+    "selectRole": "अपनी भूमिका चुनें",
+    "farmer": "किसान",
+    "labExpert": "लैब विशेषज्ञ",
+    "admin": "व्यवस्थापक",
+    "alreadyHaveAccount": "पहले से खाता है?",
+    "dontHaveAccount": "खाता नहीं है?",
+    "welcome": "वापसी पर स्वागत है!",
+    "getStarted": "अपने खाते के साथ शुरू करें"
+  },
+  "dashboard": {
+    "welcome": "स्वागत",
+    "overview": "खेत अवलोकन",
+    "soilHealth": "मिट्टी का स्वास्थ्य",
+    "plantHealth": "पौधे का स्वास्थ्य",
+    "recentActivity": "हाल की गतिविधि",
+    "quickActions": "त्वरित कार्य",
+    "cropYield": "फसल उत्पादन",
+    "activeFields": "सक्रिय खेत",
+    "nutrientLevelsOverTime": "समय के साथ पोषक तत्व स्तर",
+    "soilHealthMetrics": "मिट्टी स्वास्थ्य मैट्रिक्स",
+    "monthlyNPKDistribution": "मासिक NPK वितरण"
+  },
+  "soil": {
+    "analysis": "मिट्टी विश्लेषण",
+    "uploadImage": "मिट्टी की छवि अपलोड करें",
+    "captureImage": "छवि कैप्चर करें",
+    "ph": "pH",
+    "phLevel": "pH स्तर",
+    "nitrogen": "नाइट्रोजन",
+    "nitrogenShort": "नाइट्रोजन (N)",
+    "phosphorus": "फॉस्फोरस",
+    "phosphorusShort": "फॉस्फोरस (P)",
+    "potassium": "पोटैशियम",
+    "potassiumShort": "पोटैशियम (K)",
+    "moisture": "नमी",
+    "temperature": "तापमान",
+    "organicMatter": "कार्बनिक पदार्थ",
+    "parameters": "मिट्टी मापदंड",
+    "analyze": "मिट्टी का विश्लेषण करें",
+    "results": "विश्लेषण परिणाम",
+    "recommendations": "सिफारिशें"
+  },
+  "plant": {
+    "health": "पौधे का स्वास्थ्य",
+    "uploadLeaf": "पत्ती की छवि अपलोड करें",
+    "disease": "रोग का पता चला",
+    "confidence": "विश्वास",
+    "treatment": "उपचार सिफारिशें",
+    "healthy": "स्वस्थ",
+    "diseased": "रोगग्रस्त"
+  },
+  "crop": {
+    "recommendations": "फसल सिफारिशें",
+    "suitable": "आपकी मिट्टी के लिए उपयुक्त फसलें",
+    "reason": "यह फसल क्यों?",
+    "season": "सर्वोत्तम मौसम",
+    "suitability": "उपयुक्तता",
+    "names": {
+      "rice": "चावल",
+      "wheat": "गेहूं",
+      "tomato": "टमाटर",
+      "cotton": "कपास"
+    },
+    "seasons": {
+      "monsoon": "मानसून",
+      "winter": "सर्दी",
+      "summer": "गर्मी"
+    },
+    "reasons": {
+      "rice": "इष्टतम pH और उच्च नमी सामग्री इसे चावल की खेती के लिए आदर्श बनाती है",
+      "wheat": "अच्छा NPK संतुलन और मध्यम नमी गेहूं के लिए एकदम सही हैं",
+      "tomato": "मिट्टी का pH और पोषक तत्व स्तर टमाटर की उत्कृष्ट वृद्धि का समर्थन करते हैं",
+      "cotton": "पर्याप्त जल निकासी और पोषक तत्व सामग्री कपास के लिए उपयुक्त है"
+    }
+  },
+  "reports": {
+    "title": "रिपोर्ट और विश्लेषण",
+    "download": "PDF रिपोर्ट डाउनलोड करें",
+    "generate": "रिपोर्ट तैयार करें",
+    "generateNew": "नई रिपोर्ट तैयार करें",
+    "history": "रिपोर्ट इतिहास",
+    "soilHealthAnalysis": "मिट्टी स्वास्थ्य विश्लेषण",
+    "plantDiseaseReport": "पौधे रोग रिपोर्ट",
+    "cropRecommendationSummary": "फसल सिफारिश सारांश",
+    "monthlyFarmAnalytics": "मासिक खेत विश्लेषण"
+  },
+  "map": {
+    "title": "क्षेत्र मानचित्र दृश्य",
+    "healthy": "स्वस्थ",
+    "moderate": "मध्यम",
+    "critical": "महत्वपूर्ण",
+    "location": "स्थान"
+  },
+  "forum": {
+    "title": "सामुदायिक मंच",
+    "askQuestion": "प्रश्न पूछें",
+    "recentPosts": "हाल के पोस्ट",
+    "yourQuestions": "आपके प्रश्न",
+    "expertAnswers": "विशेषज्ञ उत्तर",
+    "post": "प्रश्न पोस्ट करें",
+    "reply": "जवाब दें"
+  },
+  "calendar": {
+    "title": "रखरखाव कैलेंडर",
+    "watering": "पानी देना",
+    "fertilizing": "उर्वरक देना",
+    "pruning": "छंटाई",
+    "harvesting": "कटाई",
+    "upcoming": "आगामी कार्य",
+    "timelineView": "समयरेखा दृश्य",
+    "taskCategories": "कार्य श्रेणियाँ",
+    "taskCount": "{{count}} कार्य",
+    "taskCount_plural": "{{count}} कार्य",
+    "tasks": {
+      "waterRiceField": "चावल के खेत में पानी दें",
+      "applyOrganicFertilizer": "जैविक उर्वरक लगाएं",
+      "pruneTomatoPlants": "टमाटर के पौधे छांटें",
+      "harvestWheatCrop": "गेहूं की फसल काटें"
+    }
+  },
+  "sustainability": {
+    "title": "स्थिरता स्कोर",
+    "yourScore": "आपका स्कोर",
+    "ecoTips": "पर्यावरण के अनुकूल सुझाव",
+    "waterConservation": "जल संरक्षण",
+    "organicFarming": "जैविक खेती",
+    "soilHealth": "मिट्टी स्वास्थ्य प्रथाएं",
+    "trackPractices": "अपनी पर्यावरण के अनुकूल कृषि प्रथाओं को ट्रैक करें",
+    "tips": {
+      "dripIrrigation": {
+        "title": "ड्रिप सिंचाई",
+        "description": "ड्रिप सिंचाई प्रणालियों का उपयोग करके 60% तक पानी बचाएं"
+      },
+      "composting": {
+        "title": "कम्पोस्टिंग",
+        "description": "अपनी मिट्टी के लिए पोषक तत्वों से भरपूर खाद बनाने के लिए रसोई के कचरे का उपयोग करें"
+      },
+      "cropRotation": {
+        "title": "फसल चक्रण",
+        "description": "मिट्टी के स्वास्थ्य में सुधार और कीटों को कम करने के लिए सालाना फसलों को घुमाएं"
+      },
+      "mulching": {
+        "title": "मल्चिंग",
+        "description": "नमी बनाए रखने और खरपतवारों को दबाने के लिए जैविक मल्च लगाएं"
+      }
+    }
+  },
+  "common": {
+    "submit": "जमा करें",
+    "cancel": "रद्द करें",
+    "save": "सहेजें",
+    "loading": "लोड हो रहा है...",
+    "error": "त्रुटि",
+    "success": "सफलता",
+    "getStarted": "शुरू करें"
+  },
+  "home": {
+    "soilAnalysis": "मिट्टी विश्लेषण",
+    "soilAnalysisDesc": "उन्नत मिट्टी परीक्षण और पोषक तत्व विश्लेषण",
+    "plantHealth": "पौधे का स्वास्थ्य",
+    "plantHealthDesc": "AI-संचालित रोग पहचान और उपचार",
+    "cropRecommendations": "फसल सिफारिशें",
+    "cropRecommendationsDesc": "इष्टतम उत्पादन के लिए डेटा-संचालित फसल चयन",
+    "analyticsDashboard": "विश्लेषण डैशबोर्ड",
+    "analyticsDashboardDesc": "वास्तविक समय अंतर्दृष्टि और प्रदर्शन ट्रैकिंग"
+  },
+  "months": {
+    "jan": "जन",
+    "feb": "फर",
+    "mar": "मार",
+    "apr": "अप्रै",
+    "may": "मई",
+    "jun": "जून",
+    "jul": "जुल",
+    "aug": "अग",
+    "sep": "सितं",
+    "oct": "अक्टू",
+    "nov": "नवं",
+    "dec": "दिसं",
+    "january": "जनवरी",
+    "february": "फरवरी",
+    "march": "मार्च",
+    "april": "अप्रैल",
+    "mayFull": "मई",
+    "june": "जून",
+    "july": "जुलाई",
+    "august": "अगस्त",
+    "september": "सितंबर",
+    "october": "अक्टूबर",
+    "november": "नवंबर",
+    "december": "दिसंबर"
+  }
+}
