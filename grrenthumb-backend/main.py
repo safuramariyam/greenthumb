@@ -23,6 +23,7 @@ from models.soil_analyzer import SoilAnalyzer
 from utils.dataset_handler import DatasetHandler
 from utils.training import ModelTrainer
 from utils.soil_processing import SoilImageProcessor
+from routes.calendar import router as calendar_router
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -91,6 +92,7 @@ async def startup_event():
     # Create necessary directories
     Path("data/raw").mkdir(parents=True, exist_ok=True)
     Path("data/processed").mkdir(parents=True, exist_ok=True)
+    Path("data/calendar_tasks.json").parent.mkdir(parents=True, exist_ok=True)
     Path("models/saved").mkdir(parents=True, exist_ok=True)
     Path("models/checkpoints").mkdir(parents=True, exist_ok=True)
     
@@ -388,6 +390,12 @@ async def get_npk_guide():
             "high": "200-300 mg/kg - Ideal for fruits, root vegetables"
         }
     }
+
+# ============================================================
+# CALENDAR ENDPOINTS
+# ============================================================
+
+app.include_router(calendar_router, prefix="/calendar", tags=["calendar"])
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 2,
+    "title": "Apply organic fertilizer",
+    "type": "fertilizing",
+    "date": "2025-11-03",
+    "completed": false,
+    "description": "Apply compost and organic manure to improve soil fertility",
+    "priority": "medium"
+  },
+  {
+    "id": 3,
+    "title": "Prune tomato plants",
+    "type": "pruning",
+    "date": "2025-11-05",
+    "completed": true,
+    "description": "Remove dead leaves and excess branches from tomato plants",
+    "priority": "medium"
+  },
+  {
+    "id": 4,
+    "title": "Harvest wheat crop",
+    "type": "harvesting",
+    "date": "2025-11-10",
+    "completed": false,
+    "description": "Harvest mature wheat crop and prepare for storage",
+    "priority": "high"
+  },
+  {
+    "id": 5,
+    "title": "Test new task",
+    "type": "watering",
+    "date": "2025-11-25",
+    "completed": false,
+    "description": "Testing create functionality",
+    "priority": "high"
+  }
+]
