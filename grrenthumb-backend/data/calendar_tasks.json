@@ -1,23 +1,5 @@
 [
   {
-    "id": 2,
-    "title": "Apply organic fertilizer",
-    "type": "fertilizing",
-    "date": "2025-11-03",
-    "completed": false,
-    "description": "Apply compost and organic manure to improve soil fertility",
-    "priority": "medium"
-  },
-  {
-    "id": 3,
-    "title": "Prune tomato plants",
-    "type": "pruning",
-    "date": "2025-11-05",
-    "completed": true,
-    "description": "Remove dead leaves and excess branches from tomato plants",
-    "priority": "medium"
-  },
-  {
     "id": 4,
     "title": "Harvest wheat crop",
     "type": "harvesting",
@@ -33,6 +15,195 @@
     "date": "2025-11-25",
     "completed": false,
     "description": "Testing create functionality",
+    "priority": "high"
+  },
+  {
+    "id": 6,
+    "title": "Field Preparation",
+    "type": "general",
+    "date": "2025-11-22",
+    "completed": false,
+    "description": "Plow and prepare field for sowing",
+    "priority": "high"
+  },
+  {
+    "id": 6,
+    "title": "Seed Selection",
+    "type": "general",
+    "date": "2025-11-23",
+    "completed": false,
+    "description": "Choose high-quality wheat seeds",
+    "priority": "high"
+  },
+  {
+    "id": 6,
+    "title": "Sowing Wheat",
+    "type": "general",
+    "date": "2025-11-29",
+    "completed": false,
+    "description": "Sow seeds at proper depth and spacing",
+    "priority": "high"
+  },
+  {
+    "id": 6,
+    "title": "Irrigation Setup",
+    "type": "watering",
+    "date": "2025-12-02",
+    "completed": false,
+    "description": "Ensure irrigation system is ready",
+    "priority": "medium"
+  },
+  {
+    "id": 6,
+    "title": "First Irrigation",
+    "type": "watering",
+    "date": "2025-12-06",
+    "completed": false,
+    "description": "Provide first irrigation after sowing",
+    "priority": "medium"
+  },
+  {
+    "id": 6,
+    "title": "Fertilizer Application",
+    "type": "fertilizing",
+    "date": "2025-12-13",
+    "completed": false,
+    "description": "Apply NPK fertilizer",
+    "priority": "medium"
+  },
+  {
+    "id": 6,
+    "title": "Weed Management",
+    "type": "general",
+    "date": "2025-12-27",
+    "completed": false,
+    "description": "Control weeds in the field",
+    "priority": "low"
+  },
+  {
+    "id": 6,
+    "title": "Second Irrigation",
+    "type": "watering",
+    "date": "2026-01-06",
+    "completed": false,
+    "description": "Irrigate during tillering stage",
+    "priority": "medium"
+  },
+  {
+    "id": 6,
+    "title": "Pest Control",
+    "type": "general",
+    "date": "2026-01-21",
+    "completed": false,
+    "description": "Monitor and control pests",
+    "priority": "low"
+  },
+  {
+    "id": 6,
+    "title": "Final Irrigation",
+    "type": "watering",
+    "date": "2026-03-12",
+    "completed": false,
+    "description": "Last irrigation before harvest",
+    "priority": "high"
+  },
+  {
+    "id": 6,
+    "title": "Harvest Wheat",
+    "type": "harvesting",
+    "date": "2026-04-11",
+    "completed": false,
+    "description": "Harvest when grains are hard and golden",
+    "priority": "high"
+  },
+  {
+    "id": 7,
+    "title": "Land Preparation",
+    "type": "general",
+    "date": "2025-11-22",
+    "completed": false,
+    "description": "Prepare field by plowing and leveling",
+    "priority": "high"
+  },
+  {
+    "id": 7,
+    "title": "Seed Selection & Treatment",
+    "type": "general",
+    "date": "2025-11-23",
+    "completed": false,
+    "description": "Select quality seeds and treat with fungicide",
+    "priority": "high"
+  },
+  {
+    "id": 7,
+    "title": "Seed Sowing/Transplanting",
+    "type": "general",
+    "date": "2025-11-29",
+    "completed": false,
+    "description": "Sow seeds or transplant seedlings",
+    "priority": "high"
+  },
+  {
+    "id": 7,
+    "title": "Water Management",
+    "type": "watering",
+    "date": "2025-12-06",
+    "completed": false,
+    "description": "Maintain 2-5 cm water level",
+    "priority": "medium"
+  },
+  {
+    "id": 7,
+    "title": "First Fertilizer Application",
+    "type": "fertilizing",
+    "date": "2025-12-13",
+    "completed": false,
+    "description": "Apply nitrogen fertilizer",
+    "priority": "medium"
+  },
+  {
+    "id": 7,
+    "title": "Weed Control",
+    "type": "general",
+    "date": "2025-12-20",
+    "completed": false,
+    "description": "Remove weeds manually or with herbicide",
+    "priority": "medium"
+  },
+  {
+    "id": 7,
+    "title": "Pest Monitoring",
+    "type": "general",
+    "date": "2025-12-27",
+    "completed": false,
+    "description": "Check for pests and apply control measures if needed",
+    "priority": "low"
+  },
+  {
+    "id": 7,
+    "title": "Second Fertilizer Application",
+    "type": "fertilizing",
+    "date": "2026-01-03",
+    "completed": false,
+    "description": "Apply phosphorus and potassium",
+    "priority": "medium"
+  },
+  {
+    "id": 7,
+    "title": "Drain Water",
+    "type": "watering",
+    "date": "2026-03-07",
+    "completed": false,
+    "description": "Drain water 1-2 weeks before harvest",
+    "priority": "high"
+  },
+  {
+    "id": 7,
+    "title": "Harvest Rice",
+    "type": "harvesting",
+    "date": "2026-03-22",
+    "completed": false,
+    "description": "Harvest when grains are golden yellow",
     "priority": "high"
   }
 ]

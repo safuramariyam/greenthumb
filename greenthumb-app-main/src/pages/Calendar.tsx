@@ -20,6 +20,17 @@ import {
   CalendarWebSocket,
   CreateCalendarTaskData
 } from '@/services/calendarApi';
+import { getWeatherRecommendations, WeatherRecommendation } from '@/services/weatherApi';
+import {
+  getTemplateCategories,
+  applyTaskTemplate,
+  TemplateCategory,
+  ApplyTemplateResult,
+  getCropIcon,
+  getSeasonIcon,
+  getTemplateDuration,
+  getTemplateDifficulty
+} from '@/services/templatesApi';
 import { useToast } from '@/hooks/use-toast';
 
 const Calendar = () => {
@@ -30,6 +41,9 @@ const Calendar = () => {
   const [loading, setLoading] = useState(true);
   const [ws, setWs] = useState<CalendarWebSocket | null>(null);
   const [isCreateDialogOpen, setIsCreateDialogOpen] = useState(false);
+  const [weatherRecommendations, setWeatherRecommendations] = useState<WeatherRecommendation[]>([]);
+  const [templateCategories, setTemplateCategories] = useState<Record<string, TemplateCategory>>({});
+  const [applyingTemplate, setApplyingTemplate] = useState<string | null>(null);
   const [newTask, setNewTask] = useState<CreateCalendarTaskData>({
     title: '',
     type: 'watering',
@@ -46,12 +60,30 @@ const Calendar = () => {
     'Harvest wheat crop': 'harvestWheatCrop',
   };
 
-  // Fetch tasks from API
+  // Fetch tasks and weather data from API
   const fetchTasks = useCallback(async () => {
     try {
       setLoading(true);
       const fetchedTasks = await getCalendarTasks();
       setTasks(fetchedTasks);
+
+      // Fetch weather recommendations
+      try {
+        const weatherData = await getWeatherRecommendations();
+        setWeatherRecommendations(weatherData.recommendations);
+      } catch (weatherError) {
+        console.warn('Weather data not available:', weatherError);
+        // Don't fail if weather data is unavailable
+      }
+
+      // Fetch template categories
+      try {
+        const categories = await getTemplateCategories();
+        setTemplateCategories(categories);
+      } catch (templateError) {
+        console.warn('Template data not available:', templateError);
+        // Don't fail if template data is unavailable
+      }
     } catch (error) {
       console.error('Error fetching tasks:', error);
       toast({
@@ -199,6 +231,29 @@ const Calendar = () => {
         description: '',
         priority: 'medium'
       });
+    }
+  };
+
+  // Handle applying a task template
+  const handleApplyTemplate = async (templateId: string, startDate?: string) => {
+    setApplyingTemplate(templateId);
+    try {
+      const result = await applyTaskTemplate(templateId, startDate);
+      // Refresh tasks to show the new ones
+      await fetchTasks();
+      toast({
+        title: "Success",
+        description: result.message,
+      });
+    } catch (error) {
+      console.error('Error applying template:', error);
+      toast({
+        title: "Error",
+        description: "Failed to apply template",
+        variant: "destructive",
+      });
+    } finally {
+      setApplyingTemplate(null);
     }
   };
 
@@ -443,6 +498,142 @@ const Calendar = () => {
           </Card>
         </motion.div>
       </div>
+
+      {/* Weather Recommendations Section */}
+      {weatherRecommendations.length > 0 && (
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        >
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <span className="text-lg">🌤️</span>
+                Weather-Based Recommendations
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3">
+                {weatherRecommendations.map((rec, index) => (
+                  <div
+                    key={index}
+                    className={`p-4 rounded-lg border-l-4 ${
+                      rec.severity === 'high' ? 'border-l-red-500 bg-red-50' :
+                      rec.severity === 'medium' ? 'border-l-yellow-500 bg-yellow-50' :
+                      'border-l-blue-500 bg-blue-50'
+                    }`}
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className={`w-2 h-2 rounded-full mt-2 ${
+                        rec.severity === 'high' ? 'bg-red-500' :
+                        rec.severity === 'medium' ? 'bg-yellow-500' :
+                        'bg-blue-500'
+                      }`}></div>
+                      <div className="flex-1">
+                        <p className="font-medium text-sm">{rec.recommendation}</p>
+                        <p className="text-xs text-muted-foreground mt-1">{rec.reason}</p>
+                        <p className="text-xs text-muted-foreground mt-1">
+                          Applies to: <span className="font-medium">{rec.task_type} tasks</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+      )}
+
+      {/* Task Templates Section */}
+      {Object.keys(templateCategories).length > 0 && (
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.4 }}
+        >
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <span className="text-lg">📋</span>
+                Task Templates
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {Object.entries(templateCategories).map(([seasonKey, category]) => (
+                <div key={seasonKey} className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg">{getSeasonIcon(category.name.toLowerCase())}</span>
+                    <h3 className="font-semibold text-lg">{category.name}</h3>
+                    <span className="text-sm text-muted-foreground">({category.templates.length} templates)</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">{category.description}</p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {category.templates.map((template) => {
+                      const duration = getTemplateDuration(template);
+                      const difficulty = getTemplateDifficulty(template);
+
+                      return (
+                        <div
+                          key={template.id}
+                          className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                        >
+                          <div className="flex items-start justify-between mb-3">
+                            <div className="flex items-center gap-2">
+                              <span className="text-lg">{getCropIcon(template.crop_type)}</span>
+                              <div>
+                                <h4 className="font-medium">{template.name}</h4>
+                                <p className="text-sm text-muted-foreground capitalize">
+                                  {template.crop_type} • {template.season}
+                                </p>
+                              </div>
+                            </div>
+                            <span className={`px-2 py-1 rounded text-xs font-medium ${
+                              difficulty === 'easy' ? 'bg-green-100 text-green-800' :
+                              difficulty === 'medium' ? 'bg-yellow-100 text-yellow-800' :
+                              'bg-red-100 text-red-800'
+                            }`}>
+                              {difficulty}
+                            </span>
+                          </div>
+
+                          <p className="text-sm text-gray-600 mb-3">{template.description}</p>
+
+                          <div className="flex items-center justify-between text-xs text-muted-foreground mb-3">
+                            <span>{template.tasks.length} tasks</span>
+                            <span>{duration} days duration</span>
+                          </div>
+
+                          <Button
+                            onClick={() => handleApplyTemplate(template.id)}
+                            disabled={applyingTemplate === template.id}
+                            className="w-full"
+                            size="sm"
+                          >
+                            {applyingTemplate === template.id ? (
+                              <>
+                                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                                Applying...
+                              </>
+                            ) : (
+                              <>
+                                <Plus className="h-4 w-4 mr-1" />
+                                Use Template
+                              </>
+                            )}
+                          </Button>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        </motion.div>
+      )}
     </div>
   );
 };

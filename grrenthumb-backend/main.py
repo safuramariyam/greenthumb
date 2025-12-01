@@ -24,6 +24,9 @@ from utils.dataset_handler import DatasetHandler
 from utils.training import ModelTrainer
 from utils.soil_processing import SoilImageProcessor
 from routes.calendar import router as calendar_router
+from routes.weather import router as weather_router
+from routes.notifications import router as notifications_router
+from routes.templates import router as templates_router
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -396,6 +399,24 @@ async def get_npk_guide():
 # ============================================================
 
 app.include_router(calendar_router, prefix="/calendar", tags=["calendar"])
+
+# ============================================================
+# WEATHER ENDPOINTS
+# ============================================================
+
+app.include_router(weather_router, prefix="/weather", tags=["weather"])
+
+# ============================================================
+# NOTIFICATIONS ENDPOINTS
+# ============================================================
+
+app.include_router(notifications_router, prefix="/notifications", tags=["notifications"])
+
+# ============================================================
+# TEMPLATES ENDPOINTS
+# ============================================================
+
+app.include_router(templates_router, prefix="/templates", tags=["templates"])
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
